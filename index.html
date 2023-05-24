@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <title>Formulaire élèves - classes</title>
+</head>
+
+<body>
+    <main>
+        <section class="container" style="margin-top: 10rem; background-color: #AEEBFF; width: 800px; height: 500px; border-radius: 30px; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+            <h1 class="mb-3" style="text-align: center;">Formulaire élève : </h1>
+            <form action="add_eleve.php" method="post" class="form">
+                <div class="row form-group mb-3">
+                    <div class="col">
+                        <label for="nom_eleve">Nom élève : </label>
+                        <input type="text" name="nom_eleve" id="nom_eleve" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="prenom_eleve">Prénom élève : </label>
+                        <input type="text" name="prenom_eleve" id="prenom_eleve" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group mb-3">
+                    <div class="col">
+                        <label for="date_naissance">Date de naissance : </label>
+                        <input type="text" name="date_naissance" id="date_naissance" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="mail_eleve">Mail élève : </label>
+                        <input type="mail" name="mail_eleve" id="mail_eleve" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="telephone_eleve">Téléphone élève : </label>
+                        <input type="text" name="telephone_eleve" id="telephone_eleve" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group mb-3">
+                    <div class="col">
+                        <label for="adresse_eleve">Adresse de résidence : </label>
+                        <input type="text" name="adresse_eleve" id="adresse_eleve" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="codepostal_eleve">Code postal : </label>
+                        <input type="text" name="codepostal_eleve" id="codepostal_eleve" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="ville_eleve">Ville : </label>
+                        <input type="text" name="ville_eleve" id="ville_eleve" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="nom_classe">Classe : </label>
+                    <input type="text" name="nom_classe" id="nom_classe" autocomplete="off"
+                        class="form-control autocomplete" data-source="get_classes.php" data-min-length="1">
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <input type="submit" class="btn btn-primary" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; border-radius: 30px;" value="Envoyer">
+                    <input type="reset" class="btn btn-danger" style="box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; border-radius: 30px;" value="Effacer les champs">
+                </div>
+                <script src="index.js"></script>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
